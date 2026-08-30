@@ -137,7 +137,7 @@
   <div id="view-dex" class="screen">
     <div class="progress-box">
       <div id="user-info" style="font-size:14px; margin-bottom:5px;"></div>
-      <h3>수집 진행률 (<span id="progress-text">0</span>/18)</h3>
+      <h3>수집 진행률 (<span id="progress-text">0</span>/15)</h3>
       <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
     </div>
     <div class="grid" id="fossil-grid"></div>
@@ -169,7 +169,7 @@
 </div>
 
 <script>
-// 화석 데이터 (18개)
+// 화석 데이터 (15개)
 const fossilData = [
   { id: 1, name: "삼엽충", icon: "🐛", q: "고생대를 대표하는 바다 생물로, 세 개의 엽으로 나뉜 등껍질을 가진 화석은?", options: ["암모나이트", "삼엽충", "매머드", "공룡"], ans: 1 },
   { id: 2, name: "암모나이트", icon: "🐚", q: "중생대 바다에 살았던 나선형 껍데기를 가진 두족류 화석은?", options: ["삼엽충", "시조새", "암모나이트", "갑주어"], ans: 2 },
@@ -273,7 +273,7 @@ const app = {
     
     const count = this.user.collected.length;
     document.getElementById('progress-text').innerText = count;
-    document.getElementById('progress-fill').style.width = `${(count / 18) * 100}%`;
+    document.getElementById('progress-fill').style.width = `${(count / 15) * 100}%`;
 
     // 그리드 렌더링
     const grid = document.getElementById('fossil-grid');
@@ -289,7 +289,7 @@ const app = {
     });
 
     // 최종 버튼 활성화 여부
-    document.getElementById('btn-submit').disabled = (count < 18);
+    document.getElementById('btn-submit').disabled = (count < 15);
   },
 
   renderQuiz(fossil) {
