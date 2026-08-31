@@ -328,21 +328,32 @@ const app = {
     window.history.replaceState({path: cleanUrl}, '', cleanUrl);
   },
 
-  showCertificate() {
+ showCertificate() {
     const end = Date.now();
     const elapsedSec = Math.floor((end - this.user.startTime) / 1000);
     const m = Math.floor(elapsedSec / 60);
     const s = elapsedSec % 60;
+    const elapsedStr = `${m}분 ${s}초`;
     
     const d = new Date();
     const timeStr = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')} ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}:${String(d.getSeconds()).padStart(2,'0')}`;
 
+    // 1. 화면에 인증서 띄우기
     document.getElementById('cert-info').innerText = `${this.user.class}반 ${this.user.num}번 ${this.user.name}`;
-    document.getElementById('cert-time').innerHTML = `완료 시각: ${timeStr}<br>총 소요 시간: ${m}분 ${s}초`;
-    
+    document.getElementById('cert-time').innerHTML = `완료 시각: ${timeStr}<br>총 소요 시간: ${elapsedStr}`;
     document.getElementById('modal-cert').style.display = 'flex';
+
+    // 2. 구글 스프레드시트로 데이터 몰래 전송하기
+    // ★★★ 아래 따옴표 안의 주소를 선생님이 발급받은 '웹앱 URL'로 바꾸세요! ★★★
+    const scriptUrl = "https://script.google.com/macros/s/AKfycbxRdGg8Nr6EnQSyU8NQuf-v79d-vdo0z7WJ8VbDfO8OcnqBdVLFG7jpsSRC-6zuta3h/exec"; 
+    
+    const sendUrl = `${scriptUrl}?classNum=${this.user.class}&studentNum=${this.user.num}&name=${this.user.name}&elapsed=${elapsedStr}`;
+    
+    // 서버로 데이터 전송 (no-cors 모드로 백그라운드 전송)
+    fetch(sendUrl, { mode: 'no-cors' })
+      .then(() => console.log("구글 시트로 전송 완료!"))
+      .catch(error => console.error("전송 에러:", error));
   }
-};
 
 window.onload = () => app.init();
 </script>
