@@ -169,31 +169,31 @@
 </div>
 
 <script>
-// 화석 데이터 (18개)
+// 화석 데이터 (18개) - 예측 불가능한 무작위 암호(code)가 추가되었습니다!
 const fossilData = [
-  { id: 1, name: "삼엽충", icon: "🐛", q: "고생대를 대표하는 바다 생물로, 세 개의 엽으로 나뉜 등껍질을 가진 화석은?", options: ["공룡", "삼엽충", "매머드", "암모나이트" ], ans: 1 },
-  { id: 2, name: "암모나이트", icon: "🐚", q: "중생대 바다에 살았던 나선형 껍데기를 가진 두족류 화석은?", options: ["삼엽충", "시조새", "갑주어", "암모나이트" ], ans: 3 },
-  { id: 3, name: "티라노사우루스", icon: "🦖", q: "중생대 백악기에 살았던 거대한 육식 공룡은?", options: ["트리케라톱스", "스테고사우루스", "티라노사우루스", "브라키오사우루스"], ans: 2 },
-  { id: 4, name: "고사리", icon: "🌿", q: "고생대에 번성하였으며, 오늘날 석탄의 주원료가 된 식물 화석은?", options: ["소철", "고사리", "은행나무", "속씨식물"], ans: 1 },
-  { id: 5, name: "매머드", icon: "🐘", q: "신생대 빙하기에 살았으며, 온몸이 털로 덮여 있던 코끼리와 비슷한 동물은?", options: ["검치호", "매머드", "시조새", "실러캔스"], ans: 1 },
-  { id: 6, name: "시조새", icon: "🦅", q: "파충류와 조류의 특징을 모두 가지고 있어 진화의 증거가 되는 화석은?", options: ["타조", "익룡", "시조새", "티라노사우루스"], ans: 2 },
-  { id: 7, name: "호박", icon: "🍯", q: "나무의 진액이 굳어져 만들어진 화석으로, 곤충이 갇혀 있는 경우가 많은 것은?", options: ["석탄", "규화목", "호박", "석유"], ans: 2 },
-  { id: 8, name: "규화목", icon: "🪵", q: "나무줄기가 땅속에 묻힌 후 광물질이 스며들어 돌처럼 굳어진 화석은?", options: ["호박", "규화목", "스트로마톨라이트", "석탄"], ans: 1 },
-  { id: 9, name: "검치호", icon: "🐯", q: "대륙의 이동과 분리가 진행되어 오늘날과 비슷한 수륙 분포를 이루게 된 지질 시대는?", options: ["선캄브리아시대", "고생대", "중생대", "신생대"], ans: 3 },
-  { id: 10, name: "실러캔스", icon: "🐟", q: "오존층이 형성되어 자외선이 차단되면서 생물이 육상으로 진출하기 시작한 지질 시대는?", options: ["선캄브리아시대", "고생대", "중생대", "신생대"], ans: 1 },
-  { id: 11, name: "스트로마톨라이트", icon: "🪨", q: "남세균의 활동으로 층을 이루며 퇴적된, 지구 최고(最古)의 생물 흔적 화석은?", options: [ "산호", "방추충", "암모나이트", "스트로마톨라이트"], ans: 3 },
-  { id: 12, name: "공룡 발자국", icon: "🐾", q: "생물의 몸체가 아닌, 활동 흔적이 남아 생성된 '생흔 화석'에 해당하는 것은?", options: ["공룡 뼈", "공룡 발자국", "호박 속 모기", "얼어붙은 매머드"], ans: 1 },
-  { id: 13, name: "방추충(푸줄리나)", icon: "쌀", q: "고생대 말기의 얕은 바다에 살았던 쌀알 모양의 유공충 화석은?", options: ["삼엽충", "화폐석", "방추충", "암모나이트"], ans: 2 },
-  { id: 14, name: "화폐석", icon: "🪙", q: "신생대의 따뜻하고 얕은 바다에 살았던 동전 모양의 화석은?", options: ["화폐석", "방추충", "삼엽충", "암모나이트"], ans: 0 },
-  { id: 15, name: "스테고사우루스", icon: "🦕", q: "암모나이트와 은행나무와 같은 겉씨 식물이 번성한 지질 시대는?", options: ["선캄브리아시대", "고생대", "중생대", "신생대"], ans: 2 },
-  { id: 16, name: "트리케라톱스", icon: "🦏", q: "고생대 지층에서 발견할 수 없는 화석은?", options: ["갑주어", "삼엽충", "방추충", "공룡"], ans: 3 },
-  { id: 17, name: "메갈로돈", icon: "🦈", q: "지질시대 중 가장 큰 대멸종이 일어난 시기는?", options: ["고생대 초기", "고생대 중기", "고생대 말기", "중생대 말기"], ans: 2 },
-  { id: 18, name: "산호", icon: "🪸", q: "따뜻하고 얕은 바다에서 서식하므로, 과거 그 지역의 환경을 알려주는 '시상 화석'은?", options: ["공룡", "산호", "삼엽충", "암모나이트"], ans: 1 }
+  { id: 1, code: "A7X9", name: "삼엽충", icon: "🐛", q: "고생대를 대표하는 바다 생물로, 세 개의 엽으로 나뉜 등껍질을 가진 화석은?", options: ["공룡", "삼엽충", "매머드", "암모나이트" ], ans: 1 },
+  { id: 2, code: "B2M4", name: "암모나이트", icon: "🐚", q: "중생대 바다에 살았던 나선형 껍데기를 가진 두족류 화석은?", options: ["삼엽충", "시조새", "갑주어", "암모나이트" ], ans: 3 },
+  { id: 3, code: "K9Q1", name: "티라노사우루스", icon: "🦖", q: "중생대 백악기에 살았던 거대한 육식 공룡은?", options: ["트리케라톱스", "스테고사우루스", "티라노사우루스", "브라키오사우루스"], ans: 2 },
+  { id: 4, code: "V5P8", name: "고사리", icon: "🌿", q: "고생대에 번성하였으며, 오늘날 석탄의 주원료가 된 식물 화석은?", options: ["소철", "고사리", "은행나무", "속씨식물"], ans: 1 },
+  { id: 5, code: "R3W6", name: "매머드", icon: "🐘", q: "신생대 빙하기에 살았으며, 온몸이 털로 덮여 있던 코끼리와 비슷한 동물은?", options: ["검치호", "매머드", "시조새", "실러캔스"], ans: 1 },
+  { id: 6, code: "T8Y2", name: "시조새", icon: "🦅", q: "파충류와 조류의 특징을 모두 가지고 있어 진화의 증거가 되는 화석은?", options: ["타조", "익룡", "시조새", "티라노사우루스"], ans: 2 },
+  { id: 7, code: "C4N7", name: "호박", icon: "🍯", q: "나무의 진액이 굳어져 만들어진 화석으로, 곤충이 갇혀 있는 경우가 많은 것은?", options: ["석탄", "규화목", "호박", "석유"], ans: 2 },
+  { id: 8, code: "L1H5", name: "규화목", icon: "🪵", q: "나무줄기가 땅속에 묻힌 후 광물질이 스며들어 돌처럼 굳어진 화석은?", options: ["호박", "규화목", "스트로마톨라이트", "석탄"], ans: 1 },
+  { id: 9, code: "E6Z3", name: "검치호", icon: "🐯", q: "대륙의 이동과 분리가 진행되어 오늘날과 비슷한 수륙 분포를 이루게 된 지질 시대는?", options: ["선캄브리아시대", "고생대", "중생대", "신생대"], ans: 3 },
+  { id: 10, code: "F9J4", name: "실러캔스", icon: "🐟", q: "오존층이 형성되어 자외선이 차단되면서 생물이 육상으로 진출하기 시작한 지질 시대는?", options: ["선캄브리아시대", "고생대", "중생대", "신생대"], ans: 1 },
+  { id: 11, code: "G2D8", name: "스트로마톨라이트", icon: "🪨", q: "남세균의 활동으로 층을 이루며 퇴적된, 지구 최고(最古)의 생물 흔적 화석은?", options: [ "산호", "방추충", "암모나이트", "스트로마톨라이트"], ans: 3 },
+  { id: 12, code: "H5S1", name: "공룡 발자국", icon: "🐾", q: "생물의 몸체가 아닌, 활동 흔적이 남아 생성된 '생흔 화석'에 해당하는 것은?", options: ["공룡 뼈", "공룡 발자국", "호박 속 모기", "얼어붙은 매머드"], ans: 1 },
+  { id: 13, code: "U7C9", name: "방추충(푸줄리나)", icon: "쌀", q: "고생대 말기의 얕은 바다에 살았던 쌀알 모양의 유공충 화석은?", options: ["삼엽충", "화폐석", "방추충", "암모나이트"], ans: 2 },
+  { id: 14, code: "P4V6", name: "화폐석", icon: "🪙", q: "신생대의 따뜻하고 얕은 바다에 살았던 동전 모양의 화석은?", options: ["화폐석", "방추충", "삼엽충", "암모나이트"], ans: 0 },
+  { id: 15, code: "W8M2", name: "스테고사우루스", icon: "🦕", q: "암모나이트와 은행나무와 같은 겉씨 식물이 번성한 지질 시대는?", options: ["선캄브리아시대", "고생대", "중생대", "신생대"], ans: 2 },
+  { id: 16, code: "Y1B7", name: "트리케라톱스", icon: "🦏", q: "고생대 지층에서 발견할 수 없는 화석은?", options: ["갑주어", "삼엽충", "방추충", "공룡"], ans: 3 },
+  { id: 17, code: "Q3F5", name: "메갈로돈", icon: "🦈", q: "지질시대 중 가장 큰 대멸종이 일어난 시기는?", options: ["고생대 초기", "고생대 중기", "고생대 말기", "중생대 말기"], ans: 2 },
+  { id: 18, code: "X9T4", name: "산호", icon: "🪸", q: "따뜻하고 얕은 바다에서 서식하므로, 과거 그 지역의 환경을 알려주는 '시상 화석'은?", options: ["공룡", "산호", "삼엽충", "암모나이트"], ans: 1 }
 ];
 
 const app = {
   user: null,
-  currentFossilId: null,
+  currentFossilCode: null,
 
   init() {
     // 로컬스토리지에서 유저 정보 확인
@@ -202,9 +202,9 @@ const app = {
       this.user = JSON.parse(saved);
     }
 
-    // URL 파라미터에서 QR코드 화석 ID 확인
+    // URL 파라미터에서 QR코드 화석 암호(code) 확인
     const urlParams = new URLSearchParams(window.location.search);
-    this.currentFossilId = urlParams.get('fossil_id');
+    this.currentFossilCode = urlParams.get('code');
 
     this.route();
   },
@@ -216,9 +216,9 @@ const app = {
       return;
     }
     
-    // 2. 유저 정보가 있고, QR을 찍고 들어왔다면 퀴즈 화면
-    if (this.currentFossilId) {
-      const target = fossilData.find(f => f.id == this.currentFossilId);
+    // 2. 유저 정보가 있고, QR을 찍고(code 포함) 들어왔다면 퀴즈 화면
+    if (this.currentFossilCode) {
+      const target = fossilData.find(f => f.code === this.currentFossilCode);
       if (target) {
         // 이미 수집했는지 확인
         if (this.user.collected.includes(target.id)) {
@@ -231,6 +231,10 @@ const app = {
           this.showScreen('view-quiz');
         }
         return;
+      } else {
+        // 잘못된 코드를 주소창에 쳤을 때 (컨닝 시도 시)
+        alert("잘못된 화석 코드입니다! 직접 QR 코드를 찾아 스캔하세요.");
+        this.removeUrlParam();
       }
     }
     
@@ -323,12 +327,12 @@ const app = {
 
   removeUrlParam() {
     // 주소창에서 파라미터 지우기 (새로고침 시 다시 퀴즈 안뜨게)
-    this.currentFossilId = null;
+    this.currentFossilCode = null;
     const cleanUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
     window.history.replaceState({path: cleanUrl}, '', cleanUrl);
   },
 
- showCertificate() {
+  showCertificate() {
     const end = Date.now();
     const elapsedSec = Math.floor((end - this.user.startTime) / 1000);
     const m = Math.floor(elapsedSec / 60);
@@ -343,41 +347,20 @@ const app = {
     document.getElementById('cert-time').innerHTML = `완료 시각: ${timeStr}<br>총 소요 시간: ${elapsedStr}`;
     document.getElementById('modal-cert').style.display = 'flex';
 
-    // 2. 구글 스프레드시트로 데이터 몰래 전송하기
-    // ★★★ 아래 따옴표 안의 주소를 선생님이 발급받은 '웹앱 URL'로 바꾸세요! ★★★
+    // 2. 구글 스프레드시트로 데이터 몰래 전송하기 (선생님 주소 적용 완료)
     const scriptUrl = "https://script.google.com/macros/s/AKfycbxRdGg8Nr6EnQSyU8NQuf-v79d-vdo0z7WJ8VbDfO8OcnqBdVLFG7jpsSRC-6zuta3h/exec"; 
     
     const sendUrl = `${scriptUrl}?classNum=${this.user.class}&studentNum=${this.user.num}&name=${this.user.name}&elapsed=${elapsedStr}`;
     
-    // 서버로 데이터 전송 (no-cors 모드로 백그라운드 전송)
+    // 서버로 데이터 전송
     fetch(sendUrl, { mode: 'no-cors' })
       .then(() => console.log("구글 시트로 전송 완료!"))
       .catch(error => console.error("전송 에러:", error));
   }
-  };
+}; // <--- 저번에 누락되었던 괄호 복구 완료!
 
 window.onload = () => app.init();
 </script>
 
 </body>
 </html>
-
-<!--
-=============================================================================
-[선생님을 위한 QR코드 만들기 가이드]
-
-1. 위 코드를 웹 호스팅(예: GitHub Pages)에 올려 접속 가능한 기본 주소를 얻습니다.
-   (예시: https://my-science-class.github.io/fossil-dex/ )
-
-2. 각 화석별 QR 코드를 생성하려면, 기본 주소 뒤에 '?fossil_id=번호' 를 붙여서 QR 코드를 생성합니다.
-   
-   * 1번 삼엽충 QR코드 URL: https://my-science-class.github.io/fossil-dex/?fossil_id=1
-   * 2번 암모나이트 QR코드 URL: https://my-science-class.github.io/fossil-dex/?fossil_id=2
-   * 3번 티라노 QR코드 URL: https://my-science-class.github.io/fossil-dex/?fossil_id=3
-   ...
-   * 18번 산호 QR코드 URL: https://my-science-class.github.io/fossil-dex/?fossil_id=18
-
-3. 생성된 18개의 QR 코드를 인쇄하여 과학실 곳곳에 숨겨두거나 붙여두시면 됩니다.
-4. 네이버 QR코드 만들기(qr.naver.com)나 무료 QR 생성 사이트를 이용하시면 편리합니다.
-=============================================================================
--->
